@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+
+require 'las_vegas_best_restaurants'
+
+LasvegasBestRestaurants::CLI.new.call
