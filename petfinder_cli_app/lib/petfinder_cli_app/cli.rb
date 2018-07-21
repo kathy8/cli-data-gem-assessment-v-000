@@ -22,8 +22,9 @@ def menu
   input = gets.strip.downcase
 
   if input.to_i > 0
-    puts @dogs[input.to_i-1]
-  elsif input == "list"
+    the_dogs = @dogs[input.to_i-1]
+    puts "#{the_dogs.name} - #{the_dogs.age} - #{the_dogs.available}"
+    elsif input == "list"
     list_dogs
    else
     puts "Not sure what you want, type list or exit"
