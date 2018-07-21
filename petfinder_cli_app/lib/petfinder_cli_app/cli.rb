@@ -1,7 +1,7 @@
 class PetfinderCliApp::CLI
 
   def call
-    puts "Today's Available Pets:"
+    puts "Today's Available Pets for adoption:"
     list_pets
     menu
     goodbye
