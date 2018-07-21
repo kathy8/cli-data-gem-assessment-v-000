@@ -13,7 +13,7 @@ def list_dogs
   1. Male Dog available.
   2. Female Dog available.
 DOC
-@petfinder = PetfinderCliApp::Dogs.today
+@dogs = PetfinderCliApp::Dogs.today
 end
 
 def menu
