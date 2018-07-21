@@ -4,11 +4,11 @@ class PetfinderCliApp::Dogs
 def self.today
     # I should return a bunch of instances of Dogs
     puts <<-DOC.gsub /^\s*/, ''
-    1. Male Dog available.
-    2. Female Dog available.
+    1. Male Dog Kevin 0 to 6 months available.
+    2. Female Dog Nellie 0 to 6 months available.
   DOC
   dog_1 = self.new
-  dog_1.gender = "male"
+  dog_1.gender = "Male"
   dog_1.name = "Kevin"
   dog_1.age = "0-6 months"
   dog_1.available = "true"
