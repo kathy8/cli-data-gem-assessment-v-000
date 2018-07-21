@@ -9,10 +9,6 @@ class PetfinderCliApp::CLI
 
 def list_dogs
   puts "Today's available dogs for adoption:"
-  puts <<-DOC.gsub /^\s*/, ''
-  1. Male Dog available.
-  2. Female Dog available.
-DOC
 @dogs = PetfinderCliApp::Dogs.today
 end
 
@@ -21,14 +17,12 @@ def menu
   while input != "exit"
   puts "Enter doggy gender you would like to adopt and get info on or type list to see pets again or type exit:"
   input = gets.strip.downcase
-  case input
-  when "1"
-    puts "More info on pet 1..."
-  when "2"
-    puts "More info on pet 2..."
-  when "list"
-    list_pets
-  else
+
+  if input.to_i > 0
+    puts @dogs[input.to_i-1]
+  elsif input == "list"
+    list_dogs
+   else
     puts "Not sure what you want, type list or exit"
 end
 end
