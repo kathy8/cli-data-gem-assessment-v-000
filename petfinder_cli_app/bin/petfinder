@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/petfinder_cli_app'
+require "bundler/setup"
+require "petfinder_cli_app"
 
 PetfinderCliApp::CLI.new.call
