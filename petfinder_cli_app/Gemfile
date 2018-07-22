@@ -1,9 +1,4 @@
 source "https://rubygems.org"
-gem 'petfinder_cli_app'
-require "pry"
-require 'bundler'
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-# Specify your gem's dependencies in petfinder_cli_app.gemspec
+#Specify your gem's dependancy in petfinder_cli_app.gemspec
 gemspec
-updated  gemfile

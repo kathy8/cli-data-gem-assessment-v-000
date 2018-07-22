@@ -9,10 +9,16 @@ def self.today
 
 def self.scrape_dogs
   dogs = []
+
+  dogs << self.scrape_petfinder
   # Go to petfinder, find dogs
   # Extract the properties
   # Instantiate availability
 
 dogs
   end
+  def self.scrape_petfinder
+    dov = Nokogiri::HTML(open("https://petfinder.com"))
+ binding.binding.pry
+end
 end
