@@ -17,8 +17,9 @@ def self.scrape_dogs
 
 dogs
   end
+
   def self.scrape_petfinder
-    dov = Nokogiri::HTML(open("https://petfinder.com"))
- binding.binding.pry
+    doc = Nokogiri::HTML(open("https://petfinder.com"))
+ binding.pry
 end
 end
