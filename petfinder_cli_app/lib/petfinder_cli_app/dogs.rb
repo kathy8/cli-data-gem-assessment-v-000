@@ -19,7 +19,11 @@ dogs
   end
 
   def self.scrape_petfinder
-    doc = Nokogiri::HTML(open("https://petfinder.com"))
+    doc = Nokogiri::HTML(open("https://www.petfinder.com/search/dogs-for-adoption/us/al/35216/?distance=100"))
+    dog_cards = doc.css(".petCard_result")
+    dog_cards.each do |dog_card|
+      binding.pry
+    end
  binding.pry
 end
 end
