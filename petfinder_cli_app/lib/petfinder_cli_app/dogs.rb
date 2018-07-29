@@ -1,5 +1,5 @@
 class PetfinderCliApp::Dogs
-  attr_accessor :gender, :name, :age, :available, :url
+  attr_accessor :name, :age, :available, :url
 
 def self.today
     # Scrape petfinder and return available dogs based on that data
@@ -10,7 +10,7 @@ def self.today
 def self.scrape_dogs
   dogs = []
 
-  dogs << self.scrape_petfinder
+  dogs << self.scrape_waggingtailsrescue
   # Go to petfinder, find dogs
   # Extract the properties
   # Instantiate availability
@@ -18,12 +18,9 @@ def self.scrape_dogs
 dogs
   end
 
-  def self.scrape_petfinder
-    doc = Nokogiri::HTML(open("https://www.petfinder.com/search/dogs-for-adoption/us/al/35216/?distance=100"))
-    dog_cards = doc.css(".petCard_result")
-    dog_cards.each do |dog_card|
-      binding.pry
-    end
- binding.pry
+  def self.scrape_waggingtailsrescue
+    doc = Nokogiri::HTML(open("https://waggingtailsrescue.org/"))
+     name = doc.search("div.project-title").text
+     binding.pry
 end
 end
