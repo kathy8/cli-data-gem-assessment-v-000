@@ -13,13 +13,12 @@ CLI Gem Project Notes
 
 
 
-Pet Finder Dog - 0 to 6 months
+Wagging Tails Rescue Dog - 0 to 6 months
 1. Male Dog available.
 2. Female Dog available
 
 What is a dog?
-A dog has a gender
 A dog has a name
-A dog has an age
+A dog has a description
 A dog has a URL
 A dog is available
