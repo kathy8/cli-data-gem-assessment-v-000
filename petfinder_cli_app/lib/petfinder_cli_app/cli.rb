@@ -11,7 +11,7 @@ def list_dogs
   puts "Today's available dogs for adoption:"
 @dogs = PetfinderCliApp::Dogs.today
 @dogs.each.with_index(1) do |deal, i|
-  puts "#{i}. #{dogs.name} - #{dogs.age} - #{dogs.available}"
+  puts "#{i}. #{dogs.name} - #{dogs.description}"
 end
 end
 
@@ -23,7 +23,7 @@ def menu
 
   if input.to_i > 0
     the_dogs = @dogs[input.to_i-1]
-    puts "#{the_dogs.name} - #{the_dogs.age} - #{the_dogs.available}"
+    puts "#{the_dogs.name} - #{the_dogs.description}"
     elsif input == "list"
     list_dogs
    else

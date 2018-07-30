@@ -1,8 +1,8 @@
 class PetfinderCliApp::Dogs
-  attr_accessor :name, :age, :available, :url
+  attr_accessor :name, :description, :url
 
 def self.today
-    # Scrape petfinder and return available dogs based on that data
+    # Scrape waggingtailsrescue and return available dogs based on that data
     # I should return a bunch of instances of Dogs
    self.scrape_dogs
  end
@@ -11,7 +11,7 @@ def self.scrape_dogs
   dogs = []
 
   dogs << self.scrape_waggingtailsrescue
-  # Go to petfinder, find dogs
+  # Go to waggingtailsrescue, find dogs
   # Extract the properties
   # Instantiate availability
 
@@ -23,5 +23,11 @@ dogs
      name = doc.search("div.project-title").text
      description = doc.search("div.project-description").text
      binding.pry
+
+     dogs = self.new
+     dogs.name = doc.search("div.project-title").text
+     dogs.description = doc.search("div.project-description").text
+
+     dogs
 end
 end
