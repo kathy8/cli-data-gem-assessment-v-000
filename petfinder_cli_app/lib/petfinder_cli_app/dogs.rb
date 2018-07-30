@@ -21,6 +21,7 @@ dogs
   def self.scrape_waggingtailsrescue
     doc = Nokogiri::HTML(open("https://waggingtailsrescue.org/"))
      name = doc.search("div.project-title").text
+     description = doc.search("div.project-description").text
      binding.pry
 end
 end
