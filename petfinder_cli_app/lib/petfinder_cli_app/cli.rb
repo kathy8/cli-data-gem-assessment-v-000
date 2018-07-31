@@ -10,15 +10,15 @@ class PetfinderCliApp::CLI
 def list_dogs
   puts "Today's available dogs for adoption:"
 @dogs = PetfinderCliApp::Dogs.today
-@dogs.each.with_index(1) do |deal, i|
-  puts "#{i}. #{dogs.name} - #{dogs.description}"
+@dogs.each.with_index(1) do |dog, i|
+  puts "#{i}. #{dog.name} - #{dog.description}"
 end
 end
 
 def menu
   input = nil
   while input != "exit"
-  puts "Enter doggy gender you would like to adopt and get info on or type list to see pets again or type exit:"
+  puts "Enter doggy you would like to adopt and get info on or type list to see pets again or type exit:"
   input = gets.strip.downcase
 
   if input.to_i > 0
