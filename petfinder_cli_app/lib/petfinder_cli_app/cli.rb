@@ -11,7 +11,7 @@ def list_dogs
   puts "Today's available dogs for adoption:"
 @dogs = PetfinderCliApp::Dogs.today
 @dogs.each.with_index(1) do |dog, i|
-  puts "#{i}. #{dog.name} - #{dog.description}"
+  puts "#{i}. #{dog.title} - #{dog.description}"
 end
 end
 

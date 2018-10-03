@@ -20,10 +20,15 @@ dogs
 
   def self.scrape_waggingtailsrescue
     doc = Nokogiri::HTML(open("https://waggingtailsrescue.org/"))
-    name = doc.search("div.project-title").text
+    #name = (doc.search("div.project-title").text)
+    list_doc = doc.search("#projectPages")
+    list_doc.each.with_index do |page, i|
+      dog = PetfinderCliApp::Dog.new(
+      doc.search("div.project-title")[i].text,"hardcoded description")
+      binding.pry
+    end
     doc.search("div.project-title").each do |doginfo|
 binding.pry
 end
-
 end
 end
