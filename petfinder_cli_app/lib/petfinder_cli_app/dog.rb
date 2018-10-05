@@ -22,6 +22,5 @@ def self.count
 end
 
 def self.find_dogs(name) #class Iterate over the all array
-  @@all.detect{|dog.name == name}
+  @@all.detect{|dog| dog.name == name}
 end
-
