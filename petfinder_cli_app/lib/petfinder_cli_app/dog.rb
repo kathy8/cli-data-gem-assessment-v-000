@@ -24,3 +24,4 @@ end
 def self.find_dogs(name) #class Iterate over the all array
   @@all.detect{|dog| dog.name == name}
 end
+end
