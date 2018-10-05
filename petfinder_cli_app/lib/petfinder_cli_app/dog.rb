@@ -1,16 +1,8 @@
 class PetfinderCliApp::Dog
-  attr_accessor :name, :description
+  attr_accessor :name, :description, :url
 
-  def initialize (name, description)
-
-
+  def initialize (name, url)
     @name = name
-    @description = description
-
-
+    @url = url
   end
 end
-
-
-
-
