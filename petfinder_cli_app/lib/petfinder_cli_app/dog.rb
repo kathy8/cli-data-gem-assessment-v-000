@@ -12,6 +12,16 @@ end
     @name = name
     @url = url
   end
+  
 def self.reset_all
   @@all.clear
+end
+
+def self.count
+  @@all.size
+end
+
+def self.find_dogs(name) #class Iterate over the all array
+  @@all.detect{|dog.name == name}
+end
 end
